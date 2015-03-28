@@ -4,6 +4,8 @@ project(kawauso)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 
+set(CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}")
+
 include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}/fakevim/fakevim
   ${CMAKE_CURRENT_SOURCE_DIR}/fakevim/fakevim/utils
@@ -17,6 +19,7 @@ add_executable(
   kawauso
   main.cpp
   MainWindow.cpp
+  VimEditor.cpp
   fakevim/fakevim/fakevimhandler.cpp
   fakevim/fakevim/fakevimactions.cpp
   fakevim/fakevim/utils/qtcassert.cpp
